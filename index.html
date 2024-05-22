@@ -1,118 +1,108 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #333; 
+            color: #fff; 
         }
-        .topbar {
-            background-color: #333;
-            overflow: hidden;
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
             position: fixed;
-            top: 0;
             width: 100%;
             z-index: 1000;
-            transition: opacity 0.3s;
         }
-        .topbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
+        .navbar-scrolled {
+            background-color: #000;
         }
-        .topbar a:hover {
-            background-color: #ddd;
-            color: black;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .background {
-            background-image: url('background.jpg'); /* Change 'background.jpg' to the path of your background image */
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: -1000;
+        .navbar-logo {
+            font-size: 24px;
+        }
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-menu-item {
+            margin-right: 20px;
+        }
+        .navbar-menu-item:last-child {
+            margin-right: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        .game {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .game img {
+            max-width: 100%;
+            height: auto;
+        }
+        .game h2 {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
-    <div class="topbar" id="topbar">
-        <a href="/">Home</a>
-        <a href="/games.html">Games</a>
-        <a href="/onlinegames.html">Online Games</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
+    <header id="navbar">
+        <div class="navbar">
+            <div class="navbar-logo">Free Games</div>
+            <div class="navbar-menu">
+                <div class="navbar-menu-item"><a href="#">Home</a></div>
+                <div class="navbar-menu-item"><a href="#">Games</a></div>
+                <div class="navbar-menu-item"><a href="#">About</a></div>
+                <div class="navbar-menu-item"><a href="#">Contact</a></div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="game">
+            <h2>Game 1</h2>
+            <img src="minecarft.png" alt="Game 1">
+            <p>Minecraft</p>
+            <a href="game1.html">Play!</a>
+        </div>
+        <div class="game">
+            <h2>Game 2</h2>
+            <img src="game2.jpg" alt="Game 2">
+            <p>Description of Game 2.</p>
+            <a href="game2.html">Play Game 2</a>
+        </div>
     </div>
-    <div class="background"></div>
-
     <script>
         window.addEventListener('scroll', function() {
-            var topbar = document.getElementById('topbar');
-            var scrollPosition = window.scrollY;
-            var opacity = 1 - (scrollPosition / 5); // Adjust as needed
-            topbar.style.opacity = opacity;
+            var header = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                header.classList.add('navbar-scrolled');
+            } else {
+                header.classList.remove('navbar-scrolled');
+            }
         });
     </script>
-</body>
-</html>
-
-</html>
-
-<body text-align="-webkit-center>
-<link rel="icon" type="image/x-icon" href="favicon.svg">
-<body style="background-color:#222222;">
-<html lang="en">
-<head>
-    <body text-align="-webkit-center>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeGames</title>
-<style>
-    body {
-        color: white;
-    }
-</style>
-</head>
-<body>
-    <br>
-    <font face = "Verdana" size = "5"> <h1> FreeGames </h1></font><br />
-    <font face = "Verdana" size = "5"> <h3> Online Games! </h3></font><br />
-    <hr>
-    <!DOCTYPE html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    .hover-box {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        border-radius: 10px;
-        padding: 5px 10px;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease, visibility 0.3s;
-    }
-
-    img:hover + .hover-box {
-        visibility: visible;
-        opacity: 1;
-    }
-</style>
-</head>
-<body>
-    <a href="/minecraft">
-        <img src="minecarft.png" alt="Link to Website" width="87" height="87">
-        <div class="hover-box">Minecraft</div>
-    </a>
-</body>
-</html>
-
-    <hr>
 </body>
 </html>
