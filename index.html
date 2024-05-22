@@ -4,88 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Games</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #333; 
-            color: #fff; 
+            background-color: #1c1c1e; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+        a {
+            color: #ff3b30; /* Red link color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ff5f52; /* Red link color on hover */
         }
         header {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #000; /* Dark mode header background color */
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
             position: fixed;
             width: 100%;
             z-index: 1000;
-        }
-        .navbar-scrolled {
-            background-color: #000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the header */
         }
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .navbar-logo {
             font-size: 24px;
         }
-        .navbar-menu {
-            display: flex;
-            align-items: center;
-        }
-        .navbar-menu-item {
-            margin-right: 20px;
-        }
-        .navbar-menu-item:last-child {
-            margin-right: 0;
-        }
         .container {
             max-width: 1200px;
-            margin: 100px auto 20px;
+            margin: 80px auto 20px; /* Adjust margin to make space for fixed header */
             padding: 0 20px;
+            text-align: center;
         }
         .game {
-            border: 1px solid #ccc;
+            border: 1px solid #333; /* Dark mode game border color */
             border-radius: 5px;
             margin-bottom: 20px;
             padding: 20px;
-            background-color: #fff;
+            background-color: #2c2c2e; /* Dark mode game background color */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the games */
         }
         .game img {
             max-width: 100%;
             height: auto;
+            border-radius: 5px;
         }
         .game h2 {
             margin-top: 0;
         }
+        .footer {
+            background-color: #000; /* Dark mode footer background color */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <header id="navbar">
+    <header>
         <div class="navbar">
             <div class="navbar-logo">Free Games</div>
-            <div class="navbar-menu">
-                <div class="navbar-menu-item"><a href="#">Home</a></div>
-                <div class="navbar-menu-item"><a href="#">Games</a></div>
-                <div class="navbar-menu-item"><a href="#">About</a></div>
-                <div class="navbar-menu-item"><a href="#">Contact</a></div>
-            </div>
         </div>
     </header>
     <div class="container">
         <div class="game">
             <h2>Game 1</h2>
-            <img src="minecarft.png" alt="Game 1">
+            <img src="game1.jpg" width="50" height= "50 alt="Minecraft">
             <p>Minecraft</p>
-            <a href="game1.html">Play!</a>
+            <a href="minecraft.html">Play!</a>
         </div>
         <div class="game">
             <h2>Game 2</h2>
@@ -93,16 +94,10 @@
             <p>Description of Game 2.</p>
             <a href="game2.html">Play Game 2</a>
         </div>
+        <!-- Add more games as needed -->
     </div>
-    <script>
-        window.addEventListener('scroll', function() {
-            var header = document.getElementById('navbar');
-            if (window.scrollY > 0) {
-                header.classList.add('navbar-scrolled');
-            } else {
-                header.classList.remove('navbar-scrolled');
-            }
-        });
-    </script>
+    <footer class="footer">
+        &copy; 2024 Free Games. All Rights Reserved.
+    </footer>
 </body>
 </html>
