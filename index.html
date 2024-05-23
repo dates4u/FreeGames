@@ -3,96 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Games</title>
+    <title>FreeGames - Freetime Games for Fun!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1c1c1e; 
+            background-color: #1c1c1e;
             color: #fff; 
         }
-        a {
-            color: #ff3b30; 
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #ff5f52; 
-          }
         header {
-            background-color: #141414;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .navbar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar-logo {
-            font-size: 24px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 80px auto 20px; 
-            padding: 0 20px;
-            text-align: center;
-        }
-        .game {
-            border: 1px solid #333;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #2c2c2e; 
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-        }
-        .game img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .game h2 {
-            margin-top: 0;
-        }
-        .footer {
             background-color: #000; 
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        nav {
+            background-color: #000; 
+            color: #fff; 
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #333; 
+        }
+        footer {
+            background-color: #000; 
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="navbar-logo">Free Games</div>
-        </div>
+        <h1>FreeGames</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clicker Games</a></li>
+            <li><a href="#">Games of the Week</a></li>
+            <li><a href="#">Support FreeGames</a></li>
+            <li><a href="#">Bugs? Report here!</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <div class="game">
-            <h2>Game 1</h2>
-            <img src="game1.jpg" width="50" height= "50 alt="Minecraft">
-            <p>Minecraft</p>
-            <a href="minecraft.html">Play!</a>
+        <div class="section">
+            <h2>Games of the Week!</h2>
+            Picked Games of the Week
+            
         </div>
-        <div class="game">
-            <h2>Game 2</h2>
-            <img src="game2.jpg" alt="Game 2">
-            <p>Description of Game 2.</p>
-            <a href="game2.html">Play Game 2</a>
+        <div class="section">
+            <h2>Clicker Games</h2>
+            Clicking For fun!
+        </div>
+        <div class="section">
+            <h2>Browser Games</h2>
+            Play these on your browser!
         </div>
     </div>
-    <footer class="footer">
-        &copy; 2024 Free Games. All Rights Reserved.
+    <footer>
+        &copy; 2024 FreeGames Inc. All Rights Reserved.
     </footer>
 </body>
 </html>
